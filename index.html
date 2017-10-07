@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/plankman.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+  </head>
+  <body>
+    <div class="row">
+
+    </div>
+    <nav>
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="landing.html">Reset Plank-Man</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hint?</a>
+            </li>
+            <li class="nav-item">
+              <a id="shrink" class="btn btn-primary disabled" href="#">vauls</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-secondary disabled" href="#">safe</a>
+            </li>
+            <li  class="nav-item">
+              <a id="grow" class="btn btn-danger disabled" href="#">warning</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+                    <h4 class="card-title">Walk The Plank-Man</h4>
+          <p class="card-text">A hangman style game with a pirate theme!</p>
+          <p class="card-text">To start the game:</p>
+          <a href="#" class="btn btn-primary">Pick thy letter, make yee clever!
+            <h2 id="word"></h2>
+            <h2 id="word2"></h2>
+            <h2 id="hint"></h2>
+
+            <h2 id="astart"></h2>
+            Guesses <h4 class="startlife" id="life"></h4>
+            Wins <h4 class="startwins" id="wins"></h4> 
+            Losses <h4 class="startloss" id="losses"></h4> 
+            </a>
+            <h4 id="selected"></h4>
+        </div>
+      </div>
+    </nav>
+    <h4 id="hint" class="card-title"></h4>
+    <div class=container>
+      <div class=row>
+        <div id="shrink" class="a col-md-2 btn btn-primary">
+        a
+        </div>
+        <div id="lbtn" class="b col-md-2 btn btn-secondary">
+        b
+        </div>
+        <div id="lbtn" class="c col-md-2 btn btn-secondary">
+        c
+        </div>
+        <div id="lbtn" class="d col-md-2 btn btn-secondary">
+        d
+        </div>
+        <div id="lbtn" id="shrink" class="e col-md-2 btn btn-primary">
+        e
+        </div>
+        <div id="lbtn" class="f col-md-2 btn btn-secondary">
+        f
+        </div>
+      </div>
+      <div class=row>
+        <div id="lbtn" class="g col-md-2 btn btn-secondary">
+        g
+        </div>
+        <div id="lbtn" class="h col-md-2 btn btn-secondary">
+        h
+        </div>
+        <div id="lbtn" id="shrink" class="i col-md-2 btn btn-primary">
+        i
+        </div>
+        <div id="lbtn" id="grow" class="j col-md-2 btn btn-danger">
+        j
+        </div>
+        <div id="lbtn" class="k col-md-2 btn btn-secondary">
+        k
+        </div>
+        <div id="lbtn" class="l col-md-2 btn btn-secondary">
+        l
+        </div>
+      </div>
+      <div class=row>
+        <div id="lbtn" class="m col-md-2 btn btn-secondary">
+        m
+        </div>
+        <div id="lbtn" id="lbtn" class="n col-md-2 btn btn-secondary">
+        n
+        </div>
+        <div id="lbtn" id="shrink" class="o col-md-2 btn btn-primary">
+        o
+        </div>
+        <div id="lbtn" class="p col-md-2 btn btn-secondary">
+        p
+        </div>
+        <div id="lbtn" id="grow" class="q col-md-2 btn btn-danger">
+        q
+        </div>
+        <div id="lbtn" class="r col-md-2 btn btn-secondary">
+        r
+        </div>
+      </div>
+      <div class=row>
+        <div id="lbtn" class="s col-md-2 btn btn-secondary">
+        s
+        </div>
+        <div id="lbtn" class="t col-md-2 btn btn-secondary">
+        t
+        </div>
+        <div id="lbtn" id="shrink" class="u col-md-2 btn btn-primary">
+        u
+        </div>
+        <div id="lbtn" class="v col-md-2 btn btn-secondary">
+        v
+        </div>
+        <div id="lbtn" class="w col-md-2 btn btn-secondary">
+        w
+        </div>
+        <div id="lbtn" id="grow" class="x col-md-2 btn btn-danger">
+        x
+        </div>
+      </div>
+      <div class=row>
+        <div class=" col-md-2 ">
+         
+        </div>
+        <div class="col-md-2 ">
+         
+        </div>
+        <div id="lbtn" id="shrink" class="y col-md-2 btn btn-primary">
+        y
+        </div>
+        <div id="lbtn" id="grow" class="z col-md-2 btn btn-danger">
+        z
+        </div>
+        <div  class="col-md-2 ">
+        
+        </div>
+        <div class="col-md-2 ">
+        
+        </div>
+      </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
